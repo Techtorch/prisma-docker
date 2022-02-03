@@ -4,6 +4,8 @@ Use this docker-compose as a simple way to have a containerized postgres instanc
 
 ## Installation
 
+- Requirements: docker
+
 - Copy the `docker-compose.yml` file to your project
 
 - Store the following URL in an ENV variable
@@ -20,3 +22,5 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 ```
+
+- Run `> docker-compose up` in your terminal to start the service.
