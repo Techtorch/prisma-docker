@@ -12,4 +12,11 @@ Use this docker-compose as a simple way to have a containerized postgres instanc
 DATABASE_URL="postgresql://user:password@localhost:8432/development_db?schema=public"
 ```
 
-- Use `DATABASE_URL` variable as the prisma db source, or just hardcode it :)
+- Copy the `datasource db` config from the `prisma/schema.prisma` file to your prisma schema, so it uses the `DATABASE_URL` variable as the prisma db source, or just hardcode it :)
+
+```
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+```
